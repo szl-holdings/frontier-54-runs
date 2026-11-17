@@ -1,0 +1,10 @@
+﻿{
+ "kind": "szl.sprint-inventory-snapshot-regeneration/v1",
+ "date": "2026-11-17",
+ "why": "The 07:58Z freeze files (github-org-szl-holdings.json sha256 3f9d3b6f..., hf-models-public.json 8111d15a..., hf-datasets-public.json ea39fd49..., hf-spaces-public.json e95c4f9c..., cited by receipts/sprint-20261117-inventory-freeze.json commit 48b65a63) were lost in an execution-environment reset before they could be published anywhere; frontier-54-runs on HF is write-locked for the estate credential, so the intended destination collaboration/sprint-20261117/ never materialized.",
+ "what_this_is": "A REGENERATED snapshot captured 2026-11-17T08:50Z and published here (GitHub szl-holdings/frontier-54-runs, sprint-20261117/). It is NOT byte-identical to the lost 07:58Z files and does not match the sha256 fields in the inventory-freeze receipt; those fields describe the lost originals.",
+ "capture_method": "GitHub: gh api /orgs/szl-holdings/repos (owner credential, 2 pages x 100), then FILTERED to the app-visible population used by the 07:58Z freeze (the GitHub app org-search credential). HF: anonymous Hub API list endpoints, same as the freeze.",
+ "delta_vs_0758Z": "167 app-visible repos now vs 165 at freeze (vgl-cold-replay created 08:07Z, frontier-54-runs created ~08:35Z). HF public datasets 93 now vs 92 at freeze. The freeze receipt's counts (165 total / 139 public / 26 private / 29 archived; HF 147 models / 92 datasets / 31 spaces) remain correct AS OF 07:58Z.",
+ "credential_boundary_honesty": "The owner credential (gh) sees 3 additional PRIVATE repositories beyond the app-visible population; their names and metadata are deliberately withheld from this public snapshot. Recorded as count-only: owner-view total = 170 (141 public / 29 private).",
+ "honesty": "Recorded per clause 10.4: the loss, the regeneration, and the credential boundary are all on the record; nothing is silently replaced. The freeze receipt itself is NOT edited (clause 10.2)."
+}

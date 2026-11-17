@@ -1,0 +1,20 @@
+{
+  "contains_raw_dataset_rows": false,
+  "files": {
+    "README.md": {
+      "bytes": 1181,
+      "sha256": "b5c5cb8e5bd7eb4404399dadcbcf9aa3f6e42ca9b0e1ae6066f35af690681661"
+    },
+    "audit.json": {
+      "bytes": 1381,
+      "sha256": "bb54d654e6a3016c4a1048951c37667ed233d4bd4d8f325b43f66e74e60fff50"
+    },
+    "binding.json": {
+      "bytes": 1291,
+      "sha256": "9945a0b59b50334e8c028fd5b24214016d8fe8ef99f291548aeca91d69b7c28f"
+    }
+  },
+  "quality_qualification": "NOT_ESTABLISHED",
+  "schema": "szl.private-audit-files/v1",
+  "signature": "NOT_PRESENT"
+}

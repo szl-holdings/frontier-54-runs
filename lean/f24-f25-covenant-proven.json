@@ -1,0 +1,31 @@
+{
+  "kind": "szl.formula-proof/v2",
+  "ts": "2026-11-12T13:18:45.766342+00:00",
+  "state": "MEASURED",
+  "claims": [
+    {
+      "claim": "F24 \u2014 staleness propagation",
+      "theorem": "Puriq.Formula.Proved.f24_staleness_propagation",
+      "statement": "if any input is stale, the derived result is stale or worse \u2014 staleness cannot be laundered by derivation",
+      "carriers": [
+        "worst_fresh_id",
+        "f24_staleness_propagation"
+      ]
+    },
+    {
+      "claim": "F25 \u2014 learning monotonicity",
+      "theorems": [
+        "Puriq.Formula.Proved.f25_admitted_monotone",
+        "Puriq.Formula.Proved.f25_no_unreviewed_entry"
+      ],
+      "statement": "the admitted set only grows across review cycles, and nothing unreviewed ever enters it"
+    }
+  ],
+  "verification": {
+    "checker": "Lean 4 v4.35.0 on a6000-145",
+    "result": "EXIT=0, zero errors, zero sorry (the grep hit was the docstring), zero axioms beyond core"
+  },
+  "source": "szl-holdings/szl-formulas lean/F24_F25_covenant.lean",
+  "wedge_state": "F23 PROVEN, F24 PROVEN, F25 PROVEN \u2014 F26 remains the honestly-labeled conjecture (five receipted measurements, no proof claimed)",
+  "receipt_sha256": "59394c371f1a272acdac44e83e80aba621e48fc2cb2a5a8ac08d43f1ffab3a5e"
+}

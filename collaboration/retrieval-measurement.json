@@ -1,0 +1,58 @@
+{
+  "kind": "szl.retrieval-measurement/v1",
+  "ts": "2026-11-12T01:58:41.715160+00:00",
+  "state": "MEASURED",
+  "what": "the estate's own retrieval rate \u2014 the stage-two measurement from the Vidal-Gadea roadmap, run on our receipts chain: how many recorded decisions are cited by later work",
+  "their_number": "468 rulings, 51 ever cited = 11% (Vidal-Gadea lab, counted 2026-11-06)",
+  "our_number": {
+    "receipts_recorded": 110,
+    "receipts_cited_by_later_work": 11,
+    "retrieval_rate_pct": 10.0
+  },
+  "most_cited": [
+    {
+      "receipt": "mesh/brain/state.json",
+      "cited_by": 75
+    },
+    {
+      "receipt": "mesh/mesh.json",
+      "cited_by": 42
+    },
+    {
+      "receipt": "mesh/workers/0004-kci-sma6-prxmx10144/register.json",
+      "cited_by": 6
+    },
+    {
+      "receipt": "mesh/workers/0136-ict-prxmx50112/register.json",
+      "cited_by": 6
+    },
+    {
+      "receipt": "mesh/workers/0136-ict-prxmx50112/heartbeat.json",
+      "cited_by": 6
+    },
+    {
+      "receipt": "mesh/workers/0004-kci-sma6-prxmx10144/heartbeat.json",
+      "cited_by": 6
+    },
+    {
+      "receipt": "doctrine/kamachikuna.json",
+      "cited_by": 5
+    },
+    {
+      "receipt": "receipts/a11oy-code-r1.json",
+      "cited_by": 3
+    },
+    {
+      "receipt": "benchmark/vllm-smoke-191.json",
+      "cited_by": 1
+    },
+    {
+      "receipt": "benchmark/4090-leg.json",
+      "cited_by": 1
+    }
+  ],
+  "method": "cross-reference analysis: a receipt counts as cited when a later receipt references its path or digest",
+  "why_this_matters": "the roadmap's lesson one: writing decisions down does not make them findable - measure retrieval from the first week. The chain makes the measurement automatic: every receipt is addressable, so the retrieval rate is computable by anyone, anytime, without a manual count. His 11% took a manual audit; ours is a script against public data.",
+  "honest_caveat": "the estate's chain is young; the rate will drift as the chain grows. the point is not the number - it is that the measurement is automatic, public, and repeatable.",
+  "receipt_sha256": "54ab644af9676f868bc9da3df3cce00723c1a49400c8c7f808fcd320852cb218"
+}

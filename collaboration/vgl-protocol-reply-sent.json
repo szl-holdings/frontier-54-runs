@@ -1,0 +1,23 @@
+{
+  "kind": "szl.protocol-reply/v1",
+  "ts": "2026-11-13T02:49:36.300804+00:00",
+  "state": "MEASURED",
+  "what": "Stephen's reply to the VGL Protocol v1.0 draft sent to Andr\u00e9s Vidal-Gadea",
+  "the_key_positions": {
+    "section_12_correction": "ACCEPTED \u2014 the decoder-constraint result (21.9%, 46/210) is SZL's measurement; the lab contributed the convention; provenance fixed before any DOI exists",
+    "the_1.3_percent": "HELD OUT \u2014 conflicting descriptions found; tracing the round-level records rather than inferring a denominator; the 20.7% pilot also needs its numbers; will supply both under the protocol's reporting rule or say plainly the record doesn't survive it",
+    "k_equals_10": "ACCEPTED as a repeatability pilot, not a reliability qualification",
+    "c1_identifier_rule": "ACCEPTED with the caveat: freeze eligible population, canonical identifiers, observation window and duplicate rules before the first run",
+    "division_of_labour": "ACCEPTED \u2014 SZL as worked example for A+B, VGL as independent outside party for B1, both run C+D on their own records; second operator for A3 to be named before freeze",
+    "mutual_witness": "SUPPORTED in principle; witness starts at signature (first observation = baseline); checkpoint format, authenticated exchange, independent retention, missed/conflicting rules, and continuity checking to be defined; the protocol should say explicitly that opaque heads alone don't prove extension or truth",
+    "contribution_statement": "DIRECTION RIGHT, exact wording to be checked; distinguish origin, adaptation, implementation and measured results; the retrieval script jointly motivated (their question, our implementation)",
+    "c4_held": "CONFIRMED \u2014 51/468 and 11/110 are differently defined; not evidence of agreement; define the shared measurement prospectively",
+    "part_d_as_lead": "AFFIRMED \u2014 the structural limit identified is the exact gap SZL could not close from inside; the remedy generalizes beyond both parties; the paper should lead with it",
+    "deposit_venue": "PROPOSED Zenodo \u2014 DOI-bearing, versioned, permanent; protocol also on each party's chain",
+    "named_accountability": "CONFIRMED as stated",
+    "fixture_bytes": "CAN CROSS \u2014 our fixture package is synthetic, publishable in full if the perimeter allows",
+    "freeze": "NO \u2014 not until definitions and evidence are reconciled"
+  },
+  "next": "awaiting Andr\u00e9s's counters and the plain-text protocol version; the 1.3% and 20.7% records being traced on our side",
+  "receipt_sha256": "d506ba73d1dbd81ab5aa0633fff016cd1db48a4c4a9af2d272a7df74caa65410"
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "szl.legacy-salad-receipt-audit/v1",
+  "receipt_sha256": "5f7d8752ba3bc5bcfb1752c9c12be3087527c22cfa8af405f36fc8f71e310c3b",
+  "archived_source_sha256": "a5cdcb8eb7e28a7cce4b94edeeb762405416b75125983241f21a09b56d90ddac",
+  "source_profile": "bench-v1",
+  "source_match_is_execution_attestation": false,
+  "original_receipt_unchanged": true,
+  "gpu_rerun_performed": false,
+  "promotion_authorized": false,
+  "quality_qualification": "NOT_ESTABLISHED",
+  "unit_corrections": {
+    "eval_base": {
+      "legacy_field": "energy_j",
+      "legacy_value": 330709577,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 330709.577,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    },
+    "eval_adapter": {
+      "legacy_field": "energy_j",
+      "legacy_value": 336664155,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 336664.155,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    },
+    "train_ref_adapter": {
+      "legacy_field": "energy_j",
+      "legacy_value": 236185994,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 236185.994,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    }
+  },
+  "findings": [
+    "LEGACY_TOKEN_DENOMINATOR: v1 uses input-token rather than shifted-prediction counts; do not relabel as a v2 rerun",
+    "FIT_NOT_GENERALIZATION: loss comparison characterizes the recorded source distribution only",
+    "LEGACY_RECEIPT_IS_NOT_A_COMPLETED_V2_BUNDLE"
+  ],
+  "status": "AUDITED_LEGACY_NOT_QUALIFIED"
+}

@@ -1,0 +1,114 @@
+{
+  "kind": "szl.protocol-trace-supersession/v1",
+  "ts": "2026-11-14T20:17:15.258676+00:00",
+  "what": "recovery and overturn of the 1.3%/20.7% not-recoverable verdict: per-condition receipts found in the private receipt dataset and published on the chain",
+  "supersedes": {
+    "record": "collaboration/vgl-protocol-1.3-percent-trace.json",
+    "file_byte_sha256": "bba92e6e07e125831852788cca5326318bc4d2d5d2e73b4d9510371aa78e0089",
+    "embedded_receipt_digest": "d636b4dcbd178eb6b9aeb1411846c3be64f9346416b9a5b64d4b01dce660f5f9",
+    "original_trace_ts": "2026-11-13T02:50:34.353509+00:00",
+    "reconciliation_update_ts": "2026-11-14T00:45:05.317593+00:00",
+    "superseded_verdict": {
+      "method_recoverable": true,
+      "data_recoverable": false
+    },
+    "why_superseded": "the verification that issued the verdict could not access SZLHOLDINGS/model-eval-receipts (private) and declared permanence without covering it; the owner rejected the verdict and the receipts were found there on 2026-11-14",
+    "how_named": "this record names the earlier trace and its verdicts and supersedes them; the earlier record remains on the chain unchanged"
+  },
+  "coverage_lesson": "no permanent-loss verdict may be issued while any estate store remains unchecked; verdicts must record the coverage set: what was searched, what was inaccessible, and why",
+  "recovered_evidence": {
+    "round_preamble_two_teachers_2026_11_06": {
+      "source_file_in_private_dataset": "SZLHOLDINGS/model-eval-receipts/distill-gate-receipt-2026-11-06T124748Z.json",
+      "published_on_chain_at": "receipts/distill-gate-receipt-2026-11-06T124748Z.json",
+      "sha256": "06d525d84b3bd52f3ddbb1ad903a50ca9b567505ff738499dfb3aae94328e527",
+      "computed_at": "2026-11-06T12:47:48Z",
+      "teachers": "SZLHOLDINGS/SZL-Reasoning-0.8B-v1,SZLHOLDINGS/SZL-FreeEnergy-0.8B-v1",
+      "prompts_dataset": "SZLHOLDINGS/doctrine-corpus-v2",
+      "accepted": 1,
+      "rejected": 299,
+      "samples": 150,
+      "acceptance_rate": 0.0033,
+      "per_item_verdicts": 300,
+      "independent_recount_matches_summary": true
+    },
+    "round2_no_instruction_baseline": {
+      "source_file_in_private_dataset": "SZLHOLDINGS/model-eval-receipts/distill-gate-receipt-2026-11-06T183445Z.json",
+      "published_on_chain_at": "receipts/distill-gate-receipt-2026-11-06T183445Z.json",
+      "sha256": "a19d0955a436bded9764967830668ba20ba8f8c3b111822c2d1c2c38d5101c00",
+      "computed_at": "2026-11-06T18:34:45Z",
+      "teachers": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+      "prompts_dataset": "SZLHOLDINGS/doctrine-corpus-v2",
+      "accepted": 4,
+      "rejected": 146,
+      "samples": 150,
+      "acceptance_rate": 0.0267,
+      "per_item_verdicts": 150,
+      "independent_recount_matches_summary": true
+    },
+    "round3_prompt_level_constraint": {
+      "source_file_in_private_dataset": "SZLHOLDINGS/model-eval-receipts/distill-gate-receipt-2026-11-07T115228Z.json",
+      "published_on_chain_at": "receipts/distill-gate-receipt-2026-11-07T115228Z.json",
+      "sha256": "6bab2b18bcf969f084ca6bc76901bbc5752a8ac07bcc5c6cb9f4119608c44ed3",
+      "computed_at": "2026-11-07T11:52:28Z",
+      "teachers": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+      "prompts_dataset": "SZLHOLDINGS/doctrine-corpus-v2",
+      "accepted": 2,
+      "rejected": 148,
+      "samples": 150,
+      "acceptance_rate": 0.0133,
+      "per_item_verdicts": 150,
+      "independent_recount_matches_summary": true
+    },
+    "round4_pilot_copy_constrained": {
+      "source_file_in_private_dataset": "SZLHOLDINGS/model-eval-receipts/distill-gate-receipt-2026-11-07T203231Z.json",
+      "published_on_chain_at": "receipts/distill-gate-receipt-2026-11-07T203231Z.json",
+      "sha256": "9056c8b59eea4b9b2cb5448185b87184ac910273ae1a16e7107f8cce824d5036",
+      "computed_at": "2026-11-07T20:32:31Z",
+      "teachers": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+      "prompts_dataset": "SZLHOLDINGS/doctrine-corpus-v2",
+      "accepted": 31,
+      "rejected": 119,
+      "samples": 150,
+      "acceptance_rate": 0.2067,
+      "per_item_verdicts": 150,
+      "independent_recount_matches_summary": true
+    },
+    "round4_extended_210": {
+      "source_file_in_private_dataset": "SZLHOLDINGS/model-eval-receipts/distill-gate-receipt-2026-11-07T212651Z.json",
+      "published_on_chain_at": "receipts/distill-gate-receipt-2026-11-07T212651Z.json",
+      "sha256": "4155512b149d8d77a5c24477034bdbcc1fa142a8285329c19a4665aea9b6fa3f",
+      "computed_at": "2026-11-07T21:26:51Z",
+      "teachers": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+      "prompts_dataset": "SZLHOLDINGS/doctrine-corpus-v2",
+      "accepted": 46,
+      "rejected": 164,
+      "samples": 210,
+      "acceptance_rate": 0.219,
+      "per_item_verdicts": 210,
+      "independent_recount_matches_summary": true
+    }
+  },
+  "the_series_restated": {
+    "population": "150 prompts from SZLHOLDINGS/doctrine-corpus-v2 offered to the teacher gate (round 4 extended: 210)",
+    "teacher": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+    "gate": "szl.distill.gate/v1, original version as at szl-forge ab0f1dd09adaf2196aedb550f8c2822cb42d39f6",
+    "round2_no_instruction_baseline": "4/150 = 2.67% corpus acceptance",
+    "round3_prompt_level_constraint": "2/150 = 1.33% corpus acceptance",
+    "the_1_3_percent": "the difference between the no-instruction baseline (4/150, 2.67%) and the prompt-rule condition (2/150, 1.33%): 1.33 percentage points of corpus acceptance; NOT a probe-response figure and NOT a quality claim",
+    "the_20_7_percent": "31/150 = 20.67% corpus acceptance, copy-constrained pilot (round 4)",
+    "the_21_9_percent": "46/210 = 21.9% corpus acceptance, round 4 extended; the first 150 outputs are the pilot regenerated under the same seed (accept-index prefix identical)"
+  },
+  "condition_mapping_basis": "the receipts carry counts, teachers, timestamps and per-item verdicts but not the condition label; the round mapping rests on the committed conditions README (szl-forge PR #724, byte-identical scripts) whose documented counts match these receipts exactly, and on the run-sequence timestamps",
+  "disclosed_limitations": [
+    "invocation arguments were not logged; the pinned scripts defaults (seed 3407, temperature 0.7, max_new_tokens 512) are the recorded basis, per the conditions README",
+    "the source assistant turn is not stripped and no generation prompt is added; under copy-constraint the allowed tokens are those of the prompt plus the reference answer"
+  ],
+  "verdict": {
+    "data_recoverable": true,
+    "the_1_3_percent": "QUOTABLE under the protocol section 3 reporting rule in its corrected class (corpus acceptance), with population, n and baseline receipted",
+    "the_20_7_percent": "QUOTABLE, same class",
+    "the_21_9_percent": "unchanged, corpus acceptance 46/210"
+  },
+  "not_frozen_no_doi": "not frozen; no DOI asserted",
+  "receipt_sha256": "18192b33d8ef63419b7a18c7812658154cd81ac841d8049add079446f545b985"
+}

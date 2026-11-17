@@ -1,0 +1,14 @@
+{
+  "kind": "szl.protocol-prep/v1",
+  "ts": "2026-11-12T01:48:47.465532+00:00",
+  "state": "MEASURED",
+  "commitment": "the Nov 7 letter to Vidal-Gadea: 'The harness will be pinned and the fixture package hashed before your draft arrives around the 12th'",
+  "delivered": {
+    "harness_pin": "szl-forge tag protocol-prep-2026-11-12 at 94bb7396810b94d40da9b89d6ef0e739477469e6",
+    "harness": "the Evidence-to-Decision eight-case demo (examples/evidence_to_decision)",
+    "fixture_package": "31 files hashed; package sha256 8ee4d91986c8154d12456dba6a48ed3377468231258d9402a902203b460941f0",
+    "scope": "passing is described narrowly: gate behavior and method reproducibility \u2014 nothing about biological validity"
+  },
+  "protocol_window": "the draft is due 2026-11-12 (his stated date); the estate's side is complete and pinned",
+  "receipt_sha256": "d772fc19beac4e5b7e2810f6d11cc3751231a1ff1a886fe97f7a81fe94434d62"
+}

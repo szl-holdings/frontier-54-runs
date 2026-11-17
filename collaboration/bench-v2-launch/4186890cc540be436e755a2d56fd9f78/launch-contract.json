@@ -1,0 +1,38 @@
+{
+  "schema": "szl.salad-bench-launch/v1",
+  "attempt_id": "4186890cc540be436e755a2d56fd9f78",
+  "source": {
+    "repository": "szl-holdings/szl-gpu-bridge",
+    "revision": "5218e8168a646e3e5a00927bb26dfa82cd49f4ec",
+    "sha256": "f1a8cb8adbed6fb90a7343ba54844a354224e0e12a0826465e44cb9c26590009"
+  },
+  "inputs": {
+    "base": {
+      "repo_id": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+      "revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f"
+    },
+    "adapter": {
+      "repo_id": "SZLHOLDINGS/salad-frontier-v5-r1",
+      "revision": "8e09acfe7e1f32241b3c7a76a83ac7a9ed132b51",
+      "directory": "final"
+    },
+    "dataset": {
+      "repo_id": "SZLHOLDINGS/szl-frontier-sft-mix-v4",
+      "revision": "12a26b44303299624592084c025e344d260aa7bf",
+      "eval_file": "data/eval_repo.jsonl",
+      "eval_sha256": "6ae724f37f814d6d95cde193c7ab9430e50ea78664650aac8d0286f1bb94e064",
+      "train_file": "data/sft_train.jsonl",
+      "train_sha256": "301e4f405038b33bf66a7defe1568ecc90c96341546d4515758b3796e566fb4a"
+    }
+  },
+  "destination": {
+    "repo_id": "SZLHOLDINGS/frontier-54-runs",
+    "repo_type": "dataset",
+    "prefix": "receipts/bench"
+  },
+  "measurement": {
+    "max_length": 2048,
+    "train_ref_rows": 2000,
+    "seed": 1234
+  }
+}

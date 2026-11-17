@@ -1,0 +1,63 @@
+{
+  "kind": "szl.protocol-trace/v1",
+  "ts": "2026-11-13T02:50:34.353509+00:00",
+  "state": "MEASURED",
+  "what": "the 1.3% and 21.9% record trace for the VGL protocol \u2014 the honest finding",
+  "the_21_9_percent": {
+    "figure": "21.9% (46/210)",
+    "what_it_measures": "corpus acceptance rate in the distillation pipeline: the copy-constrained teacher gate accepted 46 of 210 source examples",
+    "population": "210 source examples offered to the teacher gate",
+    "numerator": "46 accepted into the training corpus (SZLHOLDINGS/governed-distill-4b-sft-v3-topup)",
+    "the_gate": "szl.distill.gate/v1 (fail-closed grounding gate, hardened through five review waves)",
+    "the_teacher": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1 with copy_constrained decoding (tokens restricted to source context)",
+    "the_pilot": "20.7% (replicated)",
+    "source_record": "szl-holdings/szl-forge frontier/governed-distill-0.8b-w30-20261107/candidate.json (the lineage section)",
+    "important_correction": "the 21.9% is a CORPUS ACCEPTANCE rate, not an abstention battery score; the protocol's section 3 worked example reads it as a probe-response figure, which is the wrong measurement class; the number survives but its class needs correcting in the next draft revision"
+  },
+  "the_1_3_percent": {
+    "figure": "1.3% worse than no instruction",
+    "what_it_measures": "the reported difference between prompt-level constraint (stating the rule in the prompt) and no instruction",
+    "the_honest_finding": "the raw per-condition counts are NOT RECOVERABLE from any accessible record; the measurement was made in a prior session whose workspace is gone; the node where the raw data may have been stored is currently unreachable; the only surviving reference is the rounded figure in the correspondence",
+    "the_protocol_ruling": "under section 3's own rule, the figure cannot be quoted; Stephen's reply already held it out; this trace confirms the hold is permanent unless the raw data is found on a recovered node"
+  },
+  "the_follow_up_to_andres": "the 21.9% is quotable with its full context (corpus acceptance, 46/210, the gate, the teacher, the corpus); the 1.3% does not survive the protocol's reporting rule and stays held; the 20.7% pilot's raw counts are likewise not recoverable without node access",
+  "receipt_sha256": "d8e9eba6aed4576a8710184508d8864c84e91155235c0d4856f56a5154f60e84",
+  "reconciliation_update_20261114": {
+    "ts": "2026-11-14T00:45:05.317593+00:00",
+    "what_changed": "PR #724 and PR #725 merged on szl-forge main after the original trace was issued",
+    "pr_724": {
+      "title": "training/distill: commit round-3/round-4 condition scripts (byte-identical, as run)",
+      "merge_commit": "9753403eaa3a",
+      "merged_at": "2026-11-14T00:20:01Z",
+      "what_it_provides": "The METHOD: the exact condition scripts (distill_wave_cd.py and distill_wave_ga.py) that produced the Nov 7 teacher-gate receipts, byte-identical and SHA-pinned",
+      "what_it_does_not_provide": "The DATA: the per-item results from the Nov 7 run are not in the repository",
+      "link": "https://github.com/szl-holdings/szl-forge/pull/724"
+    },
+    "pr_725": {
+      "title": "frontier/w30: correct 'replicated' / 'hardened' wording (candidate.json, README)",
+      "merge_commit": "576683221bc4",
+      "merged_at": "2026-11-14T00:32:07Z",
+      "what_it_provides": "The corrected candidate.json: the 21.9% properly classified as corpus acceptance, the gate precisely identified at ab0f1dd09ada, the 20.7% pilot properly held out",
+      "what_it_does_not_provide": "Per-item evidence for the 1.3% or 20.7% figures",
+      "link": "https://github.com/szl-holdings/szl-forge/pull/725"
+    },
+    "the_reconciliation_verdict": {
+      "method_recoverable": true,
+      "data_recoverable": false,
+      "the_1_3_percent": "REMAINS EXCLUDED \u2014 the condition scripts are now available (the method), but the per-condition counts from the Nov 7 run still do not exist in any accessible record (the data). The figure cannot be validated from what is on main.",
+      "the_20_7_percent": "REMAINS EXCLUDED \u2014 same reasoning: the method is now reproducible, but the historical per-item records are not in the repository.",
+      "the_21_9_percent": "CONFIRMED as corpus acceptance (46/210) \u2014 the corrected candidate.json properly classifies this with the gate precisely identified. This figure was never in question; only its measurement class was corrected.",
+      "partial_supersession": "The original trace's statement that the raw records were 'not recoverable from any accessible record' is PARTIALLY superseded: the METHOD is now recoverable (the scripts are on main, byte-identical, SHA-pinned); the DATA remains unrecoverable (the per-item results do not exist in the repository). The hold on the 1.3% and 20.7% remains, but it is now a hold on DATA, not on METHOD."
+    },
+    "the_recovered_evidence_links": {
+      "condition_script_cd": "https://github.com/szl-holdings/szl-forge/blob/main/training/distill/conditions/distill_wave_cd.py",
+      "condition_script_ga": "https://github.com/szl-holdings/szl-forge/blob/main/training/distill/conditions/distill_wave_ga.py",
+      "conditions_readme": "https://github.com/szl-holdings/szl-forge/blob/main/training/distill/conditions/README.md",
+      "corrected_candidate": "https://github.com/szl-holdings/szl-forge/blob/main/frontier/governed-distill-0.8b-w30-20261107/candidate.json",
+      "corrected_readme": "https://github.com/szl-holdings/szl-forge/blob/main/frontier/governed-distill-0.8b-w30-20261107/README.md",
+      "pr_724": "https://github.com/szl-holdings/szl-forge/pull/724",
+      "pr_725": "https://github.com/szl-holdings/szl-forge/pull/725",
+      "pr_727_closed": "https://github.com/szl-holdings/szl-forge/pull/727"
+    }
+  }
+}

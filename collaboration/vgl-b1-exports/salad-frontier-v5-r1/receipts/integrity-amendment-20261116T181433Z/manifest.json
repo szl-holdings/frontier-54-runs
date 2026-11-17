@@ -1,0 +1,96 @@
+{
+  "schema": "szl.operational-evidence-export/v1",
+  "created_at": "2026-11-16T18:11:44.872577+00:00",
+  "model": "SZLHOLDINGS/salad-frontier-v5-r1",
+  "revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9",
+  "files": {
+    "heldout/result.json": {
+      "repo": "SZLHOLDINGS/salad-frontier-v5-r1",
+      "repo_type": "model",
+      "revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9",
+      "path": "receipts/salad-v5-frontier-r1-heldout/result.json",
+      "sha256": "bba9411fb492d9de52098a1450d8d328aba2093902354ba67b488c97bdf63d99",
+      "bytes": 1722
+    },
+    "heldout/heldout_eval.py": {
+      "repo": "SZLHOLDINGS/salad-frontier-v5-r1",
+      "repo_type": "model",
+      "revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9",
+      "path": "receipts/salad-v5-frontier-r1-heldout/heldout_eval.py",
+      "sha256": "f01d1886c7a0949616476e32b944be70184baa1b34688be1d6e8f5fb533db8a0",
+      "bytes": 14598
+    },
+    "bench/result.json": {
+      "repo": "SZLHOLDINGS/salad-frontier-v5-r1",
+      "repo_type": "model",
+      "revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9",
+      "path": "receipts/salad-v5-frontier-r1-bench/result.json",
+      "sha256": "5f7d8752ba3bc5bcfb1752c9c12be3087527c22cfa8af405f36fc8f71e310c3b",
+      "bytes": 2585
+    },
+    "bench/bench_eval.py": {
+      "repo": "SZLHOLDINGS/salad-frontier-v5-r1",
+      "repo_type": "model",
+      "revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9",
+      "path": "receipts/salad-v5-frontier-r1-bench/bench_eval.py",
+      "sha256": "a5cdcb8eb7e28a7cce4b94edeeb762405416b75125983241f21a09b56d90ddac",
+      "bytes": 10686
+    },
+    "training/trainer_state.json": {
+      "repo": "SZLHOLDINGS/salad-frontier-v5-r1",
+      "repo_type": "model",
+      "revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9",
+      "path": "checkpoint-200/trainer_state.json",
+      "sha256": "6f1cb9eace27105094df3eea30085fd0c7a8163edc1d9c4de48e698eecf649ef",
+      "bytes": 6506
+    },
+    "training/completion.json": {
+      "repo": "SZLHOLDINGS/frontier-54-runs",
+      "repo_type": "dataset",
+      "revision": "e99bc43f94641b9ebd0dc48eccdea3f855b8467a",
+      "path": "receipts/salad-frontier-v5-r7/result.json",
+      "sha256": "596ceda2004065109bc59d6a86b2fdbb9893c14961fe952fbe232d4326e0ff90",
+      "bytes": 932
+    },
+    "cram/p16_completion_receipt.json": {
+      "repo": "SZLHOLDINGS/frontier-54-runs",
+      "repo_type": "dataset",
+      "revision": "e99bc43f94641b9ebd0dc48eccdea3f855b8467a",
+      "path": "studies/cram-2611-17309/p16_completion_receipt.json",
+      "sha256": "1ae7ed35115510b54049c27cacab6bd1b6b7ce1c12f106acdfae265e867d9076",
+      "bytes": 5250
+    }
+  },
+  "gpu_rerun_performed": false,
+  "quality_qualification": "NOT_ESTABLISHED",
+  "adapter_verification": {
+    "path": "final/adapter_model.safetensors",
+    "bytes": 12718160,
+    "sha256": "c8cdf9657b9eae1001536ccb77808ab5ada8eff3cb9746b79f85f061f9567597",
+    "provider_lfs_sha256": "c8cdf9657b9eae1001536ccb77808ab5ada8eff3cb9746b79f85f061f9567597",
+    "hash_matches_provider": true
+  },
+  "training": {
+    "global_step": 200,
+    "max_steps": 200,
+    "epoch": 1.6
+  },
+  "cram_hf_matches_local": true,
+  "cram_github_matches_local": false,
+  "cram_json_semantically_equal": true,
+  "cram_byte_difference_is_crlf_only": true,
+  "audit_tool_source": {
+    "repository": "szl-holdings/szl-gpu-bridge",
+    "revision": "1f21914e87b615e8385b13752392beaf518e63f7",
+    "path": "tools/salad/legacy_receipt_audit.py",
+    "pull_request": "https://github.com/szl-holdings/szl-gpu-bridge/pull/207",
+    "review_state": "DRAFT_NOT_MERGED",
+    "local_test_counts": {
+      "legacy_audit": 22,
+      "existing_benchmark_launcher": 92
+    }
+  },
+  "amendment_prefix": "receipts/integrity-amendment-20261116T181433Z",
+  "original_model_revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9",
+  "amendment_parent_revision": "58785fa2b63e4b9d1763e1ab1180b43f501679a9"
+}

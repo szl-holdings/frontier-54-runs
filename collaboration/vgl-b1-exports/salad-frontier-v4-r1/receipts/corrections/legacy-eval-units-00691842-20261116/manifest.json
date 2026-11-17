@@ -1,0 +1,179 @@
+{
+  "schema": "szl.legacy-eval-correction-manifest/v1",
+  "record_type": "APPEND_ONLY_UNIT_CORRECTION",
+  "created_at_utc": "2026-11-16T23:07:00.669705+00:00",
+  "repository": {
+    "repo_id": "SZLHOLDINGS/salad-frontier-v4-r1",
+    "repo_type": "model",
+    "private": true,
+    "expected_parent_commit": "00691842ddeb8e8c080733ffd95f4c2c4fb61306"
+  },
+  "original_revision": "00691842ddeb8e8c080733ffd95f4c2c4fb61306",
+  "original_artifacts": [
+    {
+      "kind": "bench",
+      "path": "receipts/salad-v4-frontier-r1-bench/result.json",
+      "sha256": "79eb4e5a14b7d0ac7c02ccd0d4a2b969b2313b515f47660c809f19d335073aa0",
+      "bytes": 2586
+    },
+    {
+      "kind": "bench",
+      "path": "receipts/salad-v4-frontier-r1-bench/bench_eval.py",
+      "sha256": "a5cdcb8eb7e28a7cce4b94edeeb762405416b75125983241f21a09b56d90ddac",
+      "bytes": 10686
+    },
+    {
+      "kind": "heldout",
+      "path": "receipts/salad-v4-frontier-r1-heldout/result.json",
+      "sha256": "73dd49a34e1600604167ab33514fec9bbbac02c4a307a8813bec764e806f2b66",
+      "bytes": 1721
+    },
+    {
+      "kind": "heldout",
+      "path": "receipts/salad-v4-frontier-r1-heldout/heldout_eval.py",
+      "sha256": "f01d1886c7a0949616476e32b944be70184baa1b34688be1d6e8f5fb533db8a0",
+      "bytes": 14598
+    },
+    {
+      "kind": "provingground",
+      "path": "receipts/salad-v4-frontier-r1-provingground/result.json",
+      "sha256": "cf881c901c25e9d1ac0687fe094c028b35e9ac2251a41f7f122e23c2cbcb41de",
+      "bytes": 51337
+    },
+    {
+      "kind": "provingground",
+      "path": "receipts/salad-v4-frontier-r1-provingground/proving_ground_eval.py",
+      "sha256": "2fe098dc2369455b48093fa42801bdd06e781758563ed0a33d08fec5f88e776d",
+      "bytes": 8776
+    }
+  ],
+  "original_artifacts_unchanged": true,
+  "audit_source": {
+    "repository": "https://github.com/szl-holdings/szl-gpu-bridge",
+    "base_commit": "8bc4dc258c8e5af12580a22d242f5a266744326c",
+    "commit": "6dd2d58f86823ef425dc3aa2bc3f11b79bccaca9",
+    "path": "tools/salad/legacy_receipt_audit.py",
+    "sha256": "07e31d1f245419942b190f45211aab3892437b9200cdb36c8c2be41efb74baec",
+    "patch_sha256": "55cf5a7f4d5736387ec78bf3d8bbf9126ecb65e5bedf54fe737e853aa0817951"
+  },
+  "unit_basis": {
+    "counter": "nvmlDeviceGetTotalEnergyConsumption",
+    "returned_unit": "mJ",
+    "reference": "https://docs.nvidia.com/deploy/nvml-api/latest/api/group__nvmlDeviceQueries.html",
+    "conversion_to_joules": "integer counter delta divided by 1000",
+    "interpretation_basis": "exact byte-hash match of archived source; not proof that the archived source executed"
+  },
+  "corrections": [
+    {
+      "kind": "bench",
+      "window": "eval_base",
+      "legacy_field": "energy_j",
+      "legacy_value": 286129932,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 286129.932,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    },
+    {
+      "kind": "bench",
+      "window": "eval_adapter",
+      "legacy_field": "energy_j",
+      "legacy_value": 287738269,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 287738.269,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    },
+    {
+      "kind": "bench",
+      "window": "train_ref_adapter",
+      "legacy_field": "energy_j",
+      "legacy_value": 200928658,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 200928.658,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    },
+    {
+      "kind": "heldout",
+      "window": "heldout_window",
+      "legacy_field": "energy_j",
+      "legacy_value": 61709688,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 61709.688,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    },
+    {
+      "kind": "provingground",
+      "window": "provingground_window",
+      "legacy_field": "energy_j",
+      "legacy_value": 179593466,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 179593.466,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    }
+  ],
+  "audit_artifacts": [
+    {
+      "kind": "bench",
+      "path": "receipts/corrections/legacy-eval-units-00691842-20261116/bench-audit.json",
+      "sha256": "d6a3479555be3a181b967a3ee6d41224225f6d78401e62f67ea91280efb442de",
+      "bytes": 1972
+    },
+    {
+      "kind": "heldout",
+      "path": "receipts/corrections/legacy-eval-units-00691842-20261116/heldout-audit.json",
+      "sha256": "4361b09e1e77676365b3c79cb6d7095ef849f78b80e0a4a1df07024a832caddc",
+      "bytes": 2879
+    },
+    {
+      "kind": "provingground",
+      "path": "receipts/corrections/legacy-eval-units-00691842-20261116/provingground-audit.json",
+      "sha256": "4fb814018e2e937cfaadc43ae24a1f0b4be1adeda4d0fa0bd69fd536b547f009",
+      "bytes": 1652
+    }
+  ],
+  "gpu_rerun_performed": false,
+  "new_measurement_performed": false,
+  "source_match_is_execution_attestation": false,
+  "quality_qualification": "NOT_ESTABLISHED",
+  "model_stage": "CANDIDATE_TRAINING_ARTIFACT",
+  "promotion_authorized": false,
+  "limitations": [
+    "Corrected arithmetic only; original raw receipts and scripts remain preserved at the pinned revision and their existing paths.",
+    "These device-index-0 energy windows are not process-isolated or whole-node measurements.",
+    "The legacy benchmark uses an input-token denominator and is not a completed v2 benchmark bundle or held-out generalization evidence.",
+    "Legacy held-out metrics have invalid independent-arm assumptions and weak or vacuous comparisons; no new quality conclusion is granted.",
+    "Proving-ground verdicts are heuristic text checks. No Lean kernel verification or receipt-chain authentication was performed by this audit.",
+    "Proving-ground observed 30 rows while declaring 22 unproven rows; adapter and atlas revisions were unpinned in the archived script."
+  ],
+  "excluded_training_receipt": {
+    "repo_id": "SZLHOLDINGS/frontier-54-runs",
+    "repo_type": "dataset",
+    "path": "receipts/salad-frontier-v4-r1/result.json",
+    "sha256": "421b28c2896161e07989f0b178eb6fa8afc3375c892552cbfadfb8aba648cfeb",
+    "amended": false,
+    "reason": "Separate correctly converted dual-metered training receipt; its approximately 4.877 MJ result is not subject to these legacy eval unit corrections."
+  },
+  "verification": {
+    "legacy_audit_tests": 33,
+    "benchmark_contract_tests": 59,
+    "ruff_check": "PASS",
+    "ruff_format_check": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "publication_constraints": {
+    "same_private_model_repository_only": true,
+    "expected_parent_commit_required": true,
+    "new_correction_paths_must_not_exist": true,
+    "historical_paths_must_not_be_replaced": true,
+    "readme_change": "append correction note while preserving prior card bytes"
+  }
+}

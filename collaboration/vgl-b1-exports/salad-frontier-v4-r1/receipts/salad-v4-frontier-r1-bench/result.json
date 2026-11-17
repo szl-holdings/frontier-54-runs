@@ -1,0 +1,72 @@
+{
+ "schema": "szl.salad-bench/v1",
+ "kind": "MEASURED",
+ "started_utc": "2026-11-15T16:13:54.893Z",
+ "base": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+ "base_revision": "dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f",
+ "adapter_repo": "SZLHOLDINGS/salad-frontier-v4-r1",
+ "adapter_dir": "final",
+ "dataset": "SZLHOLDINGS/szl-frontier-sft-mix-v4",
+ "max_length": 2048,
+ "seed": 1234,
+ "method": "text=apply_chat_template(messages, tokenize=False); tokenize+truncate to max_length; causal-LM loss over full rendered text; identical pipeline for all three measurements",
+ "gpu": "NVIDIA GeForce RTX 3090",
+ "pins": {
+  "eval_sha256": "6ae724f37f814d6d95cde193c7ab9430e50ea78664650aac8d0286f1bb94e064",
+  "train_sha256": "301e4f405038b33bf66a7defe1568ecc90c96341546d4515758b3796e566fb4a",
+  "eval_sha256_expected": "6ae724f37f814d6d95cde193c7ab9430e50ea78664650aac8d0286f1bb94e064",
+  "train_sha256_expected": "301e4f405038b33bf66a7defe1568ecc90c96341546d4515758b3796e566fb4a"
+ },
+ "adapter_repo_revision": "de1836f9197c31deae11fbd39cd5c40d465136c1",
+ "rows": {
+  "eval": 2800,
+  "train_ref": 2000,
+  "train_ref_note": "first-N deterministic rows of train file"
+ },
+ "eval_base": {
+  "rows": 2800,
+  "tokens": 3045389,
+  "mean_loss": 1.2590145025246624,
+  "perplexity": 3.52194881439209,
+  "token_accuracy": 0.7173443406256974,
+  "seconds": 832.1,
+  "energy_j": 286129932,
+  "energy_label": "MEASURED"
+ },
+ "eval_adapter": {
+  "rows": 2800,
+  "tokens": 3045389,
+  "mean_loss": 0.9928062086117254,
+  "perplexity": 2.6987972259521484,
+  "token_accuracy": 0.7505772222275174,
+  "seconds": 841.5,
+  "energy_j": 287738269,
+  "energy_label": "MEASURED"
+ },
+ "train_ref_adapter": {
+  "rows": 2000,
+  "tokens": 2120274,
+  "mean_loss": 1.0119596280909084,
+  "perplexity": 2.7509868144989014,
+  "token_accuracy": 0.7461659823044611,
+  "seconds": 587.6,
+  "energy_j": 200928658,
+  "energy_label": "MEASURED"
+ },
+ "criterion_1": {
+  "rule": "eval_repo loss (adapter) <= train-ref loss (adapter) + 1.0",
+  "eval_loss": 0.9928062086117254,
+  "train_ref_loss": 1.0119596280909084,
+  "pass": true
+ },
+ "improvement_vs_base": {
+  "eval_loss_base": 1.2590145025246624,
+  "eval_loss_adapter": 0.9928062086117254,
+  "delta": 0.266208293912937
+ },
+ "heldout_quality_measured": false,
+ "heldout_quality_note": "criteria 2-5 (contamination official check, refusal preservation, neutral capability probe, invented-ID rate) not computed by this bench; heldout_quality stays false until all are computed and recorded (fail-closed).",
+ "status": "OK",
+ "completed_utc": "2026-11-15T16:53:33.671Z",
+ "wall_seconds": 2378.8
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "szl.formula-proof/v1",
+  "ts": "2026-11-12T13:02:08.521180+00:00",
+  "state": "MEASURED",
+  "claim": "F23 \u2014 deny-by-default safety",
+  "theorem": "Puriq.Formula.Proved.f23_deny_by_default_safety",
+  "statement": "any decision reading through admission is unchanged by the insertion of an unadmitted fact \u2014 unreviewed influence is structurally impossible",
+  "verification": {
+    "checker": "Lean 4 v4.35.0 (elan, on the estate's a6000-145)",
+    "result": "EXIT=0, zero errors, zero sorry",
+    "carriers": [
+      "f23_admission_invariant (rfl \u2014 definitional)",
+      "f23_deny_by_default_safety (rw through the invariant)"
+    ],
+    "axioms": "none beyond Lean core; no Mathlib dependency"
+  },
+  "source": "szl-holdings/szl-formulas lean/F23_deny_by_default.lean (commit 2319ba0)",
+  "wedge_use": "the Memory Covenant's core property is now a machine-checked theorem: the IETF answer to 'why govern memory?' is a link, not an argument",
+  "receipt_sha256": "fd13e3160aface2bff9c777c0d24753b80b4338baf883bbb0a31283e1b0bb87b"
+}

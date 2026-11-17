@@ -1,0 +1,18 @@
+{
+  "kind": "szl.methodology-study/v1",
+  "ts": "2026-11-12T14:57:10.695050+00:00",
+  "state": "MEASURED",
+  "studied": "the Lean formalization of Introduction to Cluster Algebras (AxiomMath/ClusterAlgebras) \u2014 1,429 blueprint entries, 1,348 formalized, 2,289 Lean declarations, zero axioms, the finite type classification and the Laurent phenomenon machine-checked",
+  "what_the_estate_adopts": [
+    "the blueprint + dependency-graph methodology: every theorem labeled, stated, dependencies mapped before formalization",
+    "the challenge-file + comparator discipline: headline claims restated independently; the carriers must prove exactly those statements",
+    "assumptions as explicit hypotheses (the estate already declares per-carrier axioms; the standard is confirmed)"
+  ],
+  "what_the_estate_already_has_that_they_do_not": [
+    "a receipts chain: every proof carries a public, hash-chained receipt with its checker, result, and timestamp",
+    "the honest conjecture discipline: F26 labeled CONJECTURE with five receipted measurements, published as such"
+  ],
+  "executed": "the estate's first challenge file committed (lean/CHALLENGE_wedge.v1.lean) \u2014 the F23/F24/F25 contract, independent of the proof files",
+  "the_doctrine": "take the JOB, never the code: their methodology is now ours, and our receipts layer is the thing their landmark project does not have",
+  "receipt_sha256": "e0d6d75bf5872f089bbcf15ed2e56f5c66b737cbaa35f226f54aef700207525c"
+}

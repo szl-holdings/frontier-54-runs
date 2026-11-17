@@ -1,0 +1,20 @@
+{
+  "kind": "szl.protocol-arrival/v1",
+  "ts": "2026-11-13T02:46:34.953465+00:00",
+  "state": "MEASURED",
+  "what": "the VGL Protocol v1.0 DRAFT arrived from Andres Vidal-Gadea on its promised date (2026-11-12)",
+  "protocol": {
+    "title": "Gate behaviour and method reproducibility: a co-signed instrument",
+    "parts": [
+      "A: gate behaviour",
+      "B: method reproducibility",
+      "C: record retrieval",
+      "D: mutual witness"
+    ],
+    "the_key_contribution": "Part D: the mutual witness - each party records the other's chain head digest weekly",
+    "status": "DRAFT, not frozen. Counters prepared: witness starts at signature, Zenodo deposit proposed, fixture bytes can cross (synthetic), named accountability confirmed, k=10 as pilot not qualification"
+  },
+  "the_correction_accepted": "section 12: the decoder-constraint result (21.9%, 46/210) is SZL's measurement, not the lab's; the lab contributed the convention; provenance fixed before any DOI exists",
+  "the_honest_holds": "the 1.3% figure held out until its population and n are traced; the 20.7% pilot needs its numbers; C4 (10% vs 11%) held as differently-defined measurements that must not be presented as agreement",
+  "receipt_sha256": "058fe0a118fffc2e01d7b8ad6fd59ee2d6b413e6ec80980835e3965cd63d4fdb"
+}

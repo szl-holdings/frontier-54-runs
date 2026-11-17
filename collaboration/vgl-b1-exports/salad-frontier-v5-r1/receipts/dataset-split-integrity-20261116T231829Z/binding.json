@@ -1,0 +1,32 @@
+{
+  "associated_model": {
+    "repo_id": "SZLHOLDINGS/salad-frontier-v5-r1",
+    "revision_before_append": "f84a7ecec15e31429c966e378d3e5b77efd01417",
+    "training_used_this_exact_dataset_revision": "NOT_ESTABLISHED_BY_THIS_AUDIT"
+  },
+  "audit_sha256": "bb54d654e6a3016c4a1048951c37667ed233d4bd4d8f325b43f66e74e60fff50",
+  "candidate": {
+    "location": "OWNER_DEVICE_ONLY",
+    "published": false,
+    "rows": 2113,
+    "sha256": "17c57efda42b3c4e81300b2df0df20ce798632ee289a0349b5d949e8d15e61c5",
+    "state": "CANDIDATE_NOT_QUALIFIED"
+  },
+  "dataset": {
+    "evaluation_file": "data/eval_repo.jsonl",
+    "repo_id": "SZLHOLDINGS/szl-frontier-sft-mix-v4",
+    "revision": "12a26b44303299624592084c025e344d260aa7bf",
+    "training_file": "data/sft_train.jsonl"
+  },
+  "gpu_evaluation_performed": false,
+  "publication_scope": "PRIVATE_AUDIT_METADATA_ONLY",
+  "schema": "szl.private-dataset-audit-binding/v1",
+  "scientific_acceptance": "NOT_ESTABLISHED",
+  "source": {
+    "binding": "AUDITED_BYTES_MATCH_MERGED_SOURCE_NOT_EXECUTION_ATTESTATION",
+    "commit": "f1d6ab161ba14093c6bef7e2d30da67d90e2e1ec",
+    "path": "tools/salad/heldout_eval_v2.py",
+    "repository": "szl-holdings/szl-gpu-bridge",
+    "sha256": "3f74aa230a9b57d562736e6e5c721411d7b24f72f349cf47c854a02cef8caf0c"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "szl.legacy-salad-receipt-audit/v1",
+  "receipt_sha256": "bba9411fb492d9de52098a1450d8d328aba2093902354ba67b488c97bdf63d99",
+  "archived_source_sha256": "f01d1886c7a0949616476e32b944be70184baa1b34688be1d6e8f5fb533db8a0",
+  "source_profile": "heldout-v1",
+  "source_match_is_execution_attestation": false,
+  "original_receipt_unchanged": true,
+  "gpu_rerun_performed": false,
+  "promotion_authorized": false,
+  "quality_qualification": "NOT_ESTABLISHED",
+  "checks": {
+    "contamination": {
+      "comparison_pass": true,
+      "effective_upper_bound": 0.1,
+      "measurement_domain": [
+        0,
+        1
+      ],
+      "can_fail": true,
+      "qualification": "NOT_ESTABLISHED",
+      "rows_used": 40
+    },
+    "refusal": {
+      "comparison_pass": true,
+      "effective_lower_bound": 0.6,
+      "measurement_domain": [
+        0,
+        1
+      ],
+      "can_fail_for_recorded_baseline": true,
+      "qualification": "NOT_ESTABLISHED",
+      "reason": "comparison alone is not qualification"
+    },
+    "neutral": {
+      "comparison_pass": true,
+      "effective_lower_bound": -0.05,
+      "measurement_domain": [
+        0,
+        1
+      ],
+      "can_fail_for_recorded_baseline": false,
+      "qualification": "UNINTERPRETABLE",
+      "reason": "lower bound admits every possible rate",
+      "fixtures_in_archived_source": 20,
+      "metric": "first standalone A-D token in uppercased output, maximum 16 generated tokens",
+      "raw_outputs_present_in_result": false,
+      "cause_of_low_observation": "UNKNOWN_WITHOUT_PER_ITEM_OUTPUTS"
+    },
+    "invented_id": {
+      "comparison_pass": true,
+      "effective_upper_bound": 0.8,
+      "measurement_domain": [
+        0,
+        1
+      ],
+      "can_fail": true,
+      "qualification": "NOT_ESTABLISHED"
+    }
+  },
+  "findings": [
+    "BASE_ARM_NOT_ISOLATED: archived source calls base after PeftModel.from_pretrained(base, adapter), without an adapter-disable context",
+    "PER_ITEM_OUTPUTS_NOT_IN_RECEIPT: format failures, truncation and wrong answers cannot be separated from this summary",
+    "CONTAMINATION_SCOPE: first training rows, not independent benchmark-leakage detection",
+    "ENERGY_WINDOW_INCOMPLETE: final baseline refusal pass occurs after the ending energy read",
+    "MISSING_IMMUTABLE_BINDING:adapter_repo_revision",
+    "MISSING_IMMUTABLE_BINDING:dataset_revision",
+    "MISSING_IMMUTABLE_BINDING:source_revision"
+  ],
+  "unit_corrections": {
+    "heldout_window": {
+      "legacy_field": "energy_j",
+      "legacy_value": 82470853,
+      "actual_counter_unit": "mJ",
+      "derived_energy_j": 82470.853,
+      "conversion": "legacy raw NVML counter difference / 1000",
+      "classification": "UNIT_CORRECTION_NOT_NEW_MEASUREMENT",
+      "scope": "device index 0 counter window; not process-isolated or whole-node"
+    }
+  },
+  "status": "AUDITED_LEGACY_NOT_QUALIFIED"
+}

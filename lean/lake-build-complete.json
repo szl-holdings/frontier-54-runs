@@ -1,0 +1,9 @@
+{
+  "kind": "szl.lean-build/v1",
+  "ts": "2026-11-12T16:16:16.680341+00:00",
+  "state": "MEASURED",
+  "what": "the full lake build on lutar-lean completed successfully: 9,242 jobs, 9,212 modules built, ZERO errors (deprecation/module-system warnings only)",
+  "significance": "the proving ground's withheld verdicts now have their instrument: the Lutar Invariant theorems, the Putnam samplers (P01-P09), and QuantumBio CoherenceDecay all compiled against Mathlib v4.35.0 on the estate's own A6000",
+  "the_dreamers_homework": "hypothesis #4's baseline experiment: the 12 sketch candidates can now be machine-checked; the proving ground's next hourly cycle carries verdicts instead of withholding them",
+  "receipt_sha256": "9254408fd3975b165953b250dbedd1b9addd529c467c5c52328d395b3f5ce1ed"
+}
